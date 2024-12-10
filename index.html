@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GRID PRACTICE</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+
+        <style>
+            /* Base container grid settings */
+            .container-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px; /* Add spacing between grid items */
+                padding: 10px;
+                justify-items: center;
+                max-width: 100%;
+            }
+
+            /* General grid item styling */
+            .grid1 {
+                width: 400px;
+                max-width: 500px;
+                height: 100%;
+                box-shadow: 1px 1px 10px rgb(121, 119, 119);
+                margin-top: 5%;
+                vertical-align: middle;
+                position: relative;
+                border-radius: 8px;
+                overflow: hidden; /* To ensure images don't overflow */
+                background-color: white;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            /* Profile image styling */
+            .profilePic {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            /* Info container styling */
+            .forInfo {
+                padding: 10px;
+            }
+
+            /* Title text styling */
+            h3 {
+                margin: 0;
+                font-weight: bold;
+                font-size: 1.5rem; /* Responsive font size */
+                font-family: Honk;
+                text-align: center;
+            }
+
+            /* Secondary text styling */
+            h4 {
+                display: inline-block;
+                margin: 0;
+                color: gray;
+                font-size: 1rem;
+                font-weight: 900;
+                margin-left: 70px;
+                margin-top: 10px;
+            }
+
+            /* Profile icon styling */
+            .profileIcon {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+                position: absolute;
+                margin-left: 10px;
+            }
+
+            /* Button styling */
+            button {
+                background-color: blue;
+                width: 100px;
+                height: 35px;
+                margin-top: 25px;
+                margin-left: 10px;
+                color: white;
+                font-size: 1rem;
+                border-radius: 5px;
+                border: 1px solid black;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .jessa {
+                text-align: center;
+            }
+
+            /* Media queries for responsiveness */
+            @media (max-width: 768px) {
+                .container-grid {
+                    grid-template-columns: 1fr; /* 2 columns on medium screens */
+                }
+
+                .grid1 {
+                    max-width: 90%;
+                }
+
+                h3 {
+                    font-size: 1.25rem; /* Smaller font on smaller screens */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .container-grid {
+                    grid-template-columns: 1fr; /* Single column on small screens */
+                }
+
+                .grid1 {
+                    max-width: 100%;
+                }
+
+                h3 {
+                    font-size: 1rem; /* Even smaller font on very small screens */
+                }
+
+              
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container-grid">
+            <div class="grid1 js-grid-pic1">
+                <img class="profilePic js-pic1" src="https://i.gifer.com/2zKU.gif" alt="Normal Jessa">
+                <div class="forInfo">
+                    <h3>Normal Jessa</h3>
+                </div>
+            </div>
+            <div class="grid1 js-grid-pic2">
+                <img class="profilePic js-pic2" src="https://media.tenor.com/9yfK713DSLIAAAAi/cat-cats.gif" alt="Amiel trying to stop Jessa">
+                <div class="forInfo">
+                    <h3>Amiel trying to stop Jessa</h3>
+                </div>
+            </div>
+            <div class="grid1 js-grid-pic3">
+                <img class="profilePic js-pic3" src="https://media2.giphy.com/media/33OrjzUFwkwEg/200w.gif?cid=82a1493bu19nbkqn92eem0td6coopu87td8we4gn5g45v7i8&ep=v1_gifs_related&rid=200w.gif&ct=g" alt="Cheering Ayezza">
+                <div class="forInfo">
+                    <h3>Cheering Ayezza</h3>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
